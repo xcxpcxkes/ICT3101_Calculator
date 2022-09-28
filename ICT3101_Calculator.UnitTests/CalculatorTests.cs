@@ -3,12 +3,14 @@
     public class CalculatorTests
     {
         private Calculator _calculator;
+        IFileReader iFileReader;
 
         [SetUp]
         public void Setup()
         {
             // Arrange
             _calculator = new Calculator();
+            iFileReader = new FileReader();
         }
 
         [Test]
@@ -159,6 +161,29 @@
         {
             Assert.That(() => _calculator.UnknownFunctionB(a, b), Throws.ArgumentException);
         }
+
+        [Test]
+        [TestCase(0)]
+        public void GenMagicNum_WhenGivenInput0_ResultsEqual2(double input)
+        {
+            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(2));
+        }
+        
+        [Test]
+        [TestCase(1)]
+        public void GenMagicNum_WhenGivenInput1_ResultsEqual0(double input)
+        {
+            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(0));
+        }
+        
+        [Test]
+        [TestCase(2)]
+        public void GenMagicNum_WhenGivenInput2_ResultsEqual2(double input)
+        {
+            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(2));
+        }
+        
+        
 
     }
 }
