@@ -239,7 +239,7 @@ public class Calculator
         // --- Dependency Injection
         // FileReader getTheMagic = new FileReader();
         // --- 
-        string[] magicStrings = fileReader.Read("/Users/sinjie/Projects/ICT3101_Calculator/ICT3101_Calculator/MagicNumbers.txt");
+        string[] magicStrings = fileReader.Read("./../../../MagicNumbers.txt");
         if ((choice >= 0) && (choice < magicStrings.Length))
         {
             result = Convert.ToDouble(magicStrings[choice]);

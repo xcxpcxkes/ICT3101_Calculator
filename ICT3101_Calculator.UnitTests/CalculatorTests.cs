@@ -183,7 +183,5 @@
             Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(2));
         }
         
-        
-
     }
 }
