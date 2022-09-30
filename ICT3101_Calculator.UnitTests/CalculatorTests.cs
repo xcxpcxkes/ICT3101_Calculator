@@ -166,21 +166,21 @@
         [TestCase(0)]
         public void GenMagicNum_WhenGivenInput0_ResultsEqual2(double input)
         {
-            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(2));
+            Assert.That(() => _calculator.GenMagicNumRelativePath(input, iFileReader), Is.EqualTo(2));
         }
         
         [Test]
         [TestCase(1)]
         public void GenMagicNum_WhenGivenInput1_ResultsEqual0(double input)
         {
-            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(0));
+            Assert.That(() => _calculator.GenMagicNumRelativePath(input, iFileReader), Is.EqualTo(0));
         }
         
         [Test]
         [TestCase(2)]
         public void GenMagicNum_WhenGivenInput2_ResultsEqual2(double input)
         {
-            Assert.That(() => _calculator.GenMagicNum(input, iFileReader), Is.EqualTo(2));
+            Assert.That(() => _calculator.GenMagicNumRelativePath(input, iFileReader), Is.EqualTo(2));
         }
         
     }
